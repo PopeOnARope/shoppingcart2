@@ -1,0 +1,60 @@
+
+
+<!--     <div class="header">
+        <h1>Aww yissssssssss</h1>
+        <h3>Outdoor Equipment Shop</h3>
+
+    </div> -->
+        <div>
+            <ul class="nav">
+                <li><a href="#/about">about</a></li>
+                <li><a href="#/locations">locations</a></li>
+                <li><a href="#/edit">edit(admin only)</a></li>
+            </ul>
+        </div>
+<div ng-controller="StoreController">
+<div class="col-md-8 forSale">
+    <div ng-init="tab===1" ng-repeat="product in products">
+        <div class="productBox col-md-4">
+            <h3>{{product.name}}</h3>
+            <div class="imgDiv"><img ng-src={{product.pic}} alt=""></div>
+            <h4>{{product.price | currency : symbol}}</h4>
+            <!-- <p>{{product.description}}</p> -->
+            <ul class="nav nav-pills">
+                <li><a href ng-click="tab=1">Reviews</a></li>
+                <li><a href ng-click="tab=2">More Info</a></li>
+            </ul>
+            <div class="panel" ng-show="tab===2">
+                <h4>description</h4>
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="col-md-8 shoppingCart">
+    <h3>Shopping Cart</h3>
+    <div class="col-md-4">
+        <h4>Purchased</h4>
+        <div ng-repeat="product in purchased">
+            {{product.name}}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h4>Quantity</h4>
+        <div ng-repeat="product in purchased">
+            {{product.qty}}
+        </div>
+        <div ng-repeat="product in purchased">
+            {{total | currency : symbol}}
+        </div>
+    </div> -->
+
+<!--         <div class="col-md-3">
+        <h4>Ratings/ Reviews</h4>
+        <div ng-repeat="product in purchased">
+        {{product.review}}
+        </div>
+    </div> -->
+
